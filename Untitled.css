@@ -1,0 +1,567 @@
+body {
+    text-align: center;
+    font-family: 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', 'ヒラギノ角ゴ StdN', 'Hiragino Kaku Gothic StdN', YuGothic, 'Yu Gothic', sans-serif;
+    font-size: 16px;
+    background-color: #ececec;
+    line-break: strict;
+}
+
+.wrapper {
+    text-align: center;
+    text-align: left;
+    padding: 40px 20px;
+}
+
+article {
+    min-width: 250px;
+    max-width: 1200px;
+    padding: 20px 16px;
+    margin-bottom: 20px;
+    background-color: #ececec;
+}
+
+header {
+    background-color: #2cbcd1;
+    padding: 10px 20px;
+    color: #fff;
+}
+
+h1,
+h2,
+h3,
+h4,
+ol,
+ul {
+    margin: 12px 0 8px;
+    padding: 0;
+}
+
+/* top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+-webkit-transform: translate(-50%, -50%);
+-ms-transform: translate(-50%, -50%); */
+
+
+
+.title1 {
+    text-align: left;
+    font-size: 28px;
+}
+
+.title2 {
+    border-left: 6px solid #333;
+    padding: 2px 8px 2px;
+    background-color: #fff;
+
+}
+
+.title3 {
+    position: relative;
+    padding: 0 .5em .5em 1.5em;
+    border-bottom: 1px solid #2e2e2e;
+}
+
+.title3::before {
+    position: absolute;
+    content: '';
+    border-radius: 100%;
+    top: .3em;
+    left: .2em;
+    z-index: 2;
+    width: 18px;
+    height: 18px;
+    background: #bbbbbb;
+}
+
+.title4 {
+    padding: 16px 12px;
+    background: #fff;
+    font-family: 'Courier', 'Yu Mincho Light', 'YuMincho', 'Yu Mincho', '游明朝体', sans-serif;
+}
+
+
+.title4::before {
+    font-family: "Font Awesome 5 Free";
+    content: '\f013';
+}
+
+.title4::before {
+    padding-right: 10px;
+}
+
+/* 
+ol > li[aria-current="step"] {
+    font-weight: bold;
+} */
+
+/* .list-count2 li:before {
+    content: counter(mycounter, decimal-leading-zero);
+} */
+
+
+
+/* ***************************************** */
+/* ***************ol_maruFlow************* */
+/* ***************************************** */
+
+
+.post_content ol.ol_maruFlow {
+    padding: 0;
+}
+
+.post_content li.ol_maruFlow-wrap {
+    margin: 0;
+}
+
+.ol_maruFlow {
+    padding: 0;
+    counter-reset: mycounter;
+    /*要素の連番（カウンタ）の値をリセットする*/
+    list-style: none;
+    /*デフォルトのスタイルを非表示にする*/
+}
+
+.ol_maruFlow.bg_white {
+    background-color: #ffffff;
+    border: 1px solid #ececec;
+    padding: 6px 10px !important;
+}
+
+
+.ol_maruFlow-wrap {
+    margin: 0;
+    text-align: left;
+    padding: 0.4em;
+    padding-left: 2.4em;
+}
+
+.ol_maruFlow-wrap::before {
+    display: inline-block;
+    text-align: center;
+    line-height: 32px;
+    border-radius: 100%;
+    margin-left: -2.2rem;
+    margin-right: .2rem;
+    padding: 2px;
+    background-color: #2cbcd1;
+    content: counter(mycounter, decimal-leading-zero);
+    /*自動連番を付ける関数(0パディング形式)*/
+    counter-increment: mycounter;
+    /*要素の連番（カウンタ）の値を進める*/
+    width: 32px;
+    height: 32px;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.ol_maruFlow-heading {
+    display: inline;
+    margin-top: 2px;
+    font-weight: bold;
+}
+
+.ol_maruFlow-content {
+    margin: 12px;
+    margin-left: -1.2rem;
+    padding: 0 16px;
+    border-left: 2px dotted #000;
+}
+
+
+
+
+
+
+/* ***************************************** */
+/* ***************dl_orderedBlock************* */
+/* ***************************************** */
+
+.dl_orderedBlock {
+    counter-reset: mycounter;
+    /*要素の連番（カウンタ）の値をリセットする*/
+    display: flex;
+    padding: 16px 10px;
+    margin: 0;
+    text-align: center;
+    justify-content: space-around;
+}
+
+.dl_orderedBlock-content {
+    position: relative;
+    width: 31%;
+    border-radius: 10px;
+}
+
+.dl_orderedBlock-heading::before {
+    position: absolute;
+    top: -16px;
+    left: 26px;
+    display: inline-block;
+    text-align: center;
+    line-height: 32px;
+    border: 2px solid #2cbcd1;
+    border-radius: 100%;
+    margin-left: -2.2rem;
+    padding: 2px;
+    background-color: #fff;
+    content: counter(mycounter, decimal-leading-zero);
+    /*自動連番を付ける関数(0パディング形式)*/
+    counter-increment: mycounter;
+    /*要素の連番（カウンタ）の値を進める*/
+    width: 34px;
+    height: 34px;
+    color: #2cbcd1;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.dl_orderedBlock-heading {
+    z-index: 1;
+    padding: 8px;
+    border: 2px solid #2cbcd1;
+    border-radius: 10px 10px 0px 0px;
+    background-color: #2cbcd1;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.dl_orderedBlock-detail {
+    padding: 8px;
+    margin-left: 0;
+    border: 2px solid #2cbcd1;
+    border-radius: 0px 0px 10px 10px;
+    background-color: #f1f1f1;
+    font-size: 14px;
+}
+
+.is_connected>.dl_orderedBlock-content+.dl_orderedBlock-content::before {
+    position: absolute;
+    content: "";
+    z-index: 0;
+    top: 25px;
+    left: -8%;
+    width: 8%;
+    border-top: 4px solid #2cbcd1;
+}
+
+.is_connected-triangle>.dl_orderedBlock-content+.dl_orderedBlock-content::before {
+    position: absolute;
+    content: "";
+    z-index: 0;
+    top: 25px;
+    left: -5%;
+    border-style: solid;
+    border-top: .5rem solid transparent;
+    border-bottom: .5rem solid transparent;
+    border-left: .5rem solid #2cbcd1;
+    border-right: 0;
+}
+
+/* ----------------------------------------------
+ * Generated by Animista on 2023-10-30 18:28:57
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info. 
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+
+/**
+ * ----------------------------------------
+ * animation scale-in-top
+ * ----------------------------------------
+ */
+.scale-in-top {
+    animation: scale-in-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+@keyframes scale-in-top {
+    0% {
+        transform: scale(0);
+        transform-origin: 50% 0%;
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(1);
+        transform-origin: 50% 0%;
+        opacity: 1;
+    }
+}
+
+
+/* ***************************************** */
+/* ***************dl_ordered_TriangleBlock************* */
+/* ***************************************** */
+
+.dl_ordered_TriangleBlock {
+    /*要素の連番（カウンタ）の値をリセットする*/
+    counter-reset: mycounter;
+    padding: 0px 0px 0px 24px;
+    margin: 16px 0;
+    text-align: center;
+    justify-content: space-around;
+}
+
+.dl_ordered_TriangleBlock-content {
+    position: relative;
+    border: 2px solid #2cbcd1;
+    padding: 1rem 1rem 1rem 3rem;
+}
+
+.dl_ordered_TriangleBlock-content+.dl_ordered_TriangleBlock-content {
+    margin-top: 24px;
+}
+
+.dl_ordered_TriangleBlock-content:before {
+    position: absolute;
+    content: "";
+    top: 0px;
+    left: 0px;
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-right: 0;
+    text-align: left;
+    border-top: 3rem solid transparent;
+    border-bottom: 3rem solid transparent;
+    border-left: 3rem solid #2cbcd1;
+}
+
+.dl_ordered_TriangleBlock-content:after {
+    position: absolute;
+    top: 2rem;
+    left: .5rem;
+    content: counter(mycounter, decimal-leading-zero);
+    /*自動連番を付ける関数(0パディング形式)*/
+    counter-increment: mycounter;
+    /*要素の連番（カウンタ）の値を進める*/
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.dl_ordered_TriangleBlock-content::before {}
+
+.dl_ordered_TriangleBlock-content::after {}
+
+.dl_ordered_TriangleBlock-heading {
+    z-index: 1;
+    color: #2cbcd1;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.dl_ordered_TriangleBlock-detail {
+    margin-left: 0;
+    font-size: 14px;
+}
+
+
+.sauceURL {
+    display: block;
+}
+
+.sauceURL::before {
+    content: '●参考：';
+}
+
+.pie-chart_wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.pie-chart_wrap .box {
+    box-sizing: border-box;
+    background-color: #fff;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    width: 32%;
+    min-width: 160px;
+    max-width: 400px;
+    margin: 4px;
+    padding: 28px;
+}
+
+.box .percent {
+    position: relative;
+    text-align: center;
+    aspect-ratio: 1 / 1;
+}
+
+.box .percent .number {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    margin: 0;
+    margin-top: -2vh;
+    color: #111;
+    font-weight: bold;
+    font-size: clamp(1.5rem, 4vw, 3rem);
+}
+
+.box .percent .text {
+    padding: 10px 0 0;
+    text-align: center;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.box .percent svg {
+    transform: rotate(-90deg);
+}
+
+.box .percent svg circle {
+    /* 中心座標 */
+    cx: 50%;
+    cy: 50%;
+    r: 90;
+    fill: none;
+    stroke-width: 10;
+    stroke: #f3f3f3;
+    stroke-dasharray: calc(440 * 3.14);
+    /* 半径 × π */
+    stroke-dashoffset: 0;
+    stroke-linecap: round;
+    /* 端の形状 */
+}
+
+.box .percent svg circle.line {
+    animation: circleAnim 1s forwards;
+}
+
+.box.blue .percent svg circle.line {
+    /* 任意の数値までの線にしたい場合、外周 ―（外周 × 入れたい数値） ÷ 100 */
+    stroke-dashoffset: calc(440 - (440 * 88) / 100);
+    stroke: #03a9f4;
+}
+
+.box.red .percent svg circle.line {
+    stroke-dashoffset: calc(440 - (440 * 65) / 100);
+    stroke: #ff3051;
+}
+
+.box.green .percent svg circle.line {
+    stroke-dashoffset: calc(440 - (440 * 27) / 100);
+    stroke: #1fd26c;
+}
+
+@keyframes circleAnim {
+
+    /* 1秒で、線の長さが0から440pxになる */
+    0% {
+        stroke-dasharray: 0 440;
+    }
+
+    99.9%,
+    to {
+        stroke-dasharray: 440 440;
+    }
+}
+
+
+
+
+
+
+.bar-graph-wrap {
+    position: relative;
+    height: 350px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.bar-graph-wrap .graph {
+    height: 50px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    background: #03a9f4;
+    width: 88%;
+    border-radius: 0 4px 4px 0;
+}
+
+.graph span {
+    font-size: 14px;
+    color: #ffffff;
+}
+
+.bar-graph-wrap .graph {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.bar-graph-wrap {
+    overflow: hidden;
+}
+
+.bar-graph-wrap .graph {
+    animation: graphAnim 3s forwards;
+}
+
+@keyframes graphAnim {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+
+.rader-graph-wrap {
+    text-align: center;
+}
+
+.graph-bg {
+    width: 250px;
+    height: 250px;
+    margin: 0 auto;
+    background: url("./img/graph03_bg.webp") no-repeat center/contain;
+}
+
+.rader-graph-wrap .rader {
+    margin: 0 auto;
+    width: 220px;
+    height: 188px;
+
+    /* clip-path →指定した領域は表示し、外側は非表示にする。 */
+    /* polygon（X軸の頂点 Y軸の頂点, X軸の頂点 Y軸の頂点, X軸の頂点 Y軸の頂点） */
+    -webkit-clip-path: polygon(50% 0, 0 100%, 100% 100%);
+    clip-path: polygon(50% 0, 0 100%, 100% 100%);
+    background-color: rgba(80, 220, 220, 0.4);
+    -webkit-animation: graphAnim03 3s forwards;
+    animation: graphAnim03 3s forwards;
+}
+
+.rader-graph-wrap .blue .rader {
+    background: rgba(3, 169, 244, 0.4);
+    -webkit-clip-path: polygon(50% 17%, 2% 100%, 77% 87%);
+    clip-path: polygon(50% 17%, 2% 100%, 77% 87%);
+}
+
+.rader-graph-wrap .red .rader {
+    background: rgba(255, 48, 81, 0.4);
+    -webkit-clip-path: polygon(50% 5%, 27% 84%, 96% 98%);
+    clip-path: polygon(50% 5%, 27% 84%, 96% 98%);
+}
+
+.rader-graph-wrap .green .rader {
+    background: rgba(31, 210, 108, 0.4);
+    -webkit-clip-path: polygon(50% 58%, 6% 97%, 100% 100%);
+}
+
+
+
+.chartjs-wrap {
+    max-width: 500px;
+}
